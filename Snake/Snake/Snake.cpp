@@ -37,6 +37,7 @@ void Snake::run()
         else
         {
             std::cout << "YOU ARE A LOSER!!!!!!!!!!!!!" << std::endl;
+            events();
         }
 
     }
@@ -57,24 +58,28 @@ void Snake::events()
     if (event.type ==  sf::Event::KeyPressed)
     {
         if ((event.key.code == sf::Keyboard::Up|| event.key.code == sf::Keyboard::W)
-            &&headtowards!=Towards::Down) 
+            &&headtowards!=Towards::Down && movedQ)
         {
             headtowards = Towards::Up;
+            movedQ = false;
         }
         if ((event.key.code == sf::Keyboard::Down || event.key.code == sf::Keyboard::S)
-            && headtowards != Towards::Up)
+            && headtowards != Towards::Up && movedQ)
         {
             headtowards = Towards::Down;
+            movedQ = false;
         }
         if ((event.key.code == sf::Keyboard::Right || event.key.code == sf::Keyboard::D)
-            && headtowards != Towards::Left)
+            && headtowards != Towards::Left && movedQ)
         {
             headtowards = Towards::Right;
+            movedQ = false;
         }
         if ((event.key.code == sf::Keyboard::Left || event.key.code == sf::Keyboard::A)
-            && headtowards != Towards::Right)
+            && headtowards != Towards::Right && movedQ)
         {
             headtowards = Towards::Left;
+            movedQ = false;
         }
     }
     if (event.type == sf::Event::Closed)
@@ -96,7 +101,7 @@ void Snake::render()
     }
 
     /*渲染蛋*/
-    if (deltatime > 0.25)
+    if (deltatime > hard/2)
     {
         snakeshape->setFillColor(sf::Color(140, 125, 0, 225));
         snakeshape->setPosition((egg.x) * sizeofgrid, (egg.y) * sizeofgrid);
@@ -113,8 +118,8 @@ void Snake::render()
 
 void Snake::move()
 {
-    /*当间隔时间大于0.5s，移动蛇身*/
-    if (deltatime>0.5)
+    /*当间隔时间大于hard，移动蛇身*/
+    if (deltatime>hard)
     {
         /*蛇向前蠕动，先移动后部分，每个节点等于前一个节点位置*/
         for (size_t i = snakebody.size() - 1; i > 0; i--)
@@ -150,6 +155,7 @@ void Snake::move()
         default:
             break;
         }
+        movedQ = true;
         deltatime = 0.0;
     }
 

@@ -38,5 +38,7 @@ private:
 	sf::Clock myClock;							
 	double deltatime;								//时间戳，用来计算游戏每帧移动
 	Towards headtowards;							//前进方向	
+	double hard = 0.5;								//难度
+	bool movedQ = false;
 };
 

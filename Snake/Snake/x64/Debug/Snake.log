@@ -10,9 +10,11 @@ F:\codes\Snake\Snake\Snake\Snake.cpp(7,61): warning C4244: “参数”: 从“i
               T=float
           ]
 F:\codes\Snake\Snake\Snake\Snake.cpp(30,23): warning C4101: “event”: 未引用的局部变量
-F:\codes\Snake\Snake\Snake\Snake.cpp(93,64): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-F:\codes\Snake\Snake\Snake\Snake.cpp(93,42): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-F:\codes\Snake\Snake\Snake\Snake.cpp(102,63): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-F:\codes\Snake\Snake\Snake\Snake.cpp(102,41): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-F:\codes\Snake\Snake\Snake\Snake.cpp(171,19): warning C4553: “==”: 未使用表达式结果；是否打算使用“=”?
+F:\codes\Snake\Snake\Snake\Snake.cpp(98,64): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+F:\codes\Snake\Snake\Snake\Snake.cpp(98,42): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+F:\codes\Snake\Snake\Snake\Snake.cpp(107,63): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+F:\codes\Snake\Snake\Snake\Snake.cpp(107,41): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+F:\codes\Snake\Snake\Snake\Snake.cpp(177,19): warning C4553: “==”: 未使用表达式结果；是否打算使用“=”?
+  main.cpp
+  正在生成代码...
   Snake.vcxproj -> F:\codes\Snake\Snake\x64\Debug\Snake.exe
